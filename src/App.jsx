@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
 import Searcher from './componets/Searcher';
-import { useState } from 'react';
-import { getUser } from './services/users';
+import getUser from './services/users';
+import UserCard from './containers/UserCard';
 
 const App = () => {
   const [inputUser, setInputUser] = useState('luiznaiper');
@@ -45,6 +45,7 @@ const App = () => {
       }}
     >
       <Searcher inputUser={inputUser} setInputUser={setInputUser} />
+      <UserCard userState={userState} />
     </Container>
   );
 };

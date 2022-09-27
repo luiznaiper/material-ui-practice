@@ -12,4 +12,4 @@ const getUser = async (user) => {
   }
 };
 
-export { getUser };
+export default getUser;
