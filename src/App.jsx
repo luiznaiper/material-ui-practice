@@ -1,21 +1,34 @@
 import React, { useEffect } from 'react';
 import { Container } from '@mui/material';
-import Searcher from './componets';
+import Searcher from './componets/Searcher';
 import { useState } from 'react';
 import { getUser } from './services/users';
 
 const App = () => {
   const [inputUser, setInputUser] = useState('luiznaiper');
   const [userState, setUserState] = useState('inputUser');
+  const [notFound, setNotFound] = useState(false);
 
   const getInUser = async (user) => {
     const userResponse = await getUser(user);
-    console.log(userResponse);
+
+    if (userState === 'luiznaiper') {
+      localStorage.setItem('luiznaiper', userResponse);
+    }
+    if (userResponse.message === 'Not Found') {
+      const { luiznaiper } = localStorage;
+      setInputUser(luiznaiper);
+      setNotFound(true);
+    } else {
+      setUserState(userResponse);
+    }
   };
+
+  console.log(userState);
 
   useEffect(() => {
     getInUser(inputUser);
-  }, []);
+  }, [inputUser]);
 
   return (
     <Container
