@@ -8,13 +8,18 @@ const PaperInformation = (props) => {
     <>
       <Paper elevation={3}>
         <Stack>
-          <Typography>{public_repos}</Typography>
-        </Stack>
-        <Stack>
-          <Typography>{followers}</Typography>
-        </Stack>
-        <Stack>
-          <Typography>{following}</Typography>
+          <Stack>
+            <Typography>Repos</Typography>
+            <Typography>{public_repos}</Typography>
+          </Stack>
+          <Stack>
+            <Typography>Followers</Typography>
+            <Typography>{followers}</Typography>
+          </Stack>
+          <Stack>
+            <Typography>Following</Typography>
+            <Typography>{following}</Typography>
+          </Stack>
         </Stack>
       </Paper>
     </>
