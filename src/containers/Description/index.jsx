@@ -1,6 +1,7 @@
 import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import PaperInformation from '../../componets/PaperInformation';
+import LocationInformation from '../../componets/LocationInformation';
 
 const Description = (props) => {
   const { userState } = props;
@@ -20,7 +21,7 @@ const Description = (props) => {
         )}
       </Stack>
       <PaperInformation userState={userState} />
-      {/* <LocationInformation /> */}
+      <LocationInformation userState={userState} />
     </>
   );
 };
