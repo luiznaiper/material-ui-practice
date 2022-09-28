@@ -36,7 +36,7 @@ const App = () => {
         background: '#2C2C38',
         color: '#8c8c8e',
         width: '80vh',
-        height: '400px',
+        height: '600px',
         borderRadius: '16px',
         marginTop: '40px',
         display: 'flex',

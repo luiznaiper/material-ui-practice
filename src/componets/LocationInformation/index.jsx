@@ -38,7 +38,7 @@ const LocationInformation = (props) => {
           <LanguageIcon />
           {blog !== null ? (
             <a href={blog} target="_blank" rel="noopener noreferrer">
-              <Typography>@{twitter_username}</Typography>
+              <Typography>{blog}</Typography>
             </a>
           ) : (
             <Typography>No Website</Typography>
